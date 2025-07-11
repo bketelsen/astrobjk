@@ -14,3 +14,6 @@ content:
         label: date
         options:
           format: yyyy-MM-dd
+      - name: body
+        label: Body
+        type: rich-text
