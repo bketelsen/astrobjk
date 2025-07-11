@@ -21,6 +21,14 @@ content:
         label: date
         options:
           format: yyyy-MM-dd
+      - name: updatedDate
+        type: date
+        label: date
+        options:
+          format: yyyy-MM-dd
+      - name: heroImage
+        type: image
+        label: Hero Image
       - name: featured
         type: boolean
         default: false
