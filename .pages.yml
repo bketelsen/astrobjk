@@ -11,7 +11,11 @@ content:
       fields: [ title, published, featured, pubDate ]
     fields:
       - name: title
+        type: string
+        label: Title
       - name: description
+        type: text
+        label: Description
       - name: pubDate
         type: date
         label: date
