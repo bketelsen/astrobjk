@@ -13,9 +13,11 @@ content:
       - name: title
         type: string
         label: Title
+        required: true
       - name: description
         type: text
         label: Description
+        required: true
       - name: pubDate
         type: date
         label: Published Date
