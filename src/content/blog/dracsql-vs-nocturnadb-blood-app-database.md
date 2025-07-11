@@ -1,11 +1,13 @@
 ---
-title: 'DracSQL vs NocturnaDB: Choosing the Right Database for Your Blood App'
-description: 'Struggling to choose between DracSQL and NocturnaDB for your blood delivery app? Explore the undead pros and cons of each database option, from query performance under moonlight to coffin-safe replication. A fang-to-fang tech comparison.'
-pubDate: '2025-01-01'
-heroImage: '../../images/blog-placeholder-3.jpg'
+title: "DracSQL vs NocturnaDB: Choosing the Right Database for Your Blood App"
+description: Struggling to choose between DracSQL and NocturnaDB for your blood
+  delivery app? Explore the undead pros and cons of each database option, from
+  query performance under moonlight to coffin-safe replication. A fang-to-fang
+  tech comparison.
+pubDate: 2025-01-01
+heroImage: ../../images/blog-placeholder-6.jpg
 featured: true
 ---
-
 There comes a time in every undead developer’s life when they must choose their database. You’ve got your schema, your stack, your late-night coding playlist humming softly in the background. But what’s going to keep your blood app pumping reliably? What database can handle the... peculiarities of an after-hours user base?
 
 In this eternal night of options, two names rise to the top like a well-aged Type O: **DracSQL** and **NocturnaDB**. I’ve worked with both. I’ve also fought them both under cursed moons and during schema migrations that nearly cost me my immortal soul. This article is not a benchmark. It’s a survival guide.
@@ -67,4 +69,3 @@ I’ve migrated data across centuries, from scrolls to spreadsheets to cloud clu
 And remember: whether your tables are relational or your documents ephemeral, your data still has to feed the hungry.
 
 Don't let it go stale.
-      
