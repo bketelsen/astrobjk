@@ -6,6 +6,8 @@ content:
     label: Articles
     path: src/content/blog
     type: collection
+    view:
+      fields: [ title, published, pubDate ]
     fields:
       - name: title
       - name: description
