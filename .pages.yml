@@ -1,10 +1,11 @@
 media:
   input: src/images
-  output: media
+  output: ../../images
 content:
   - name: blog
     label: Articles
     path: src/content/blog
+    filename: '{year}-{month}-{day}-{fields.title}.md'
     type: collection
     view:
       fields: [ title, published, featured, pubDate ]
