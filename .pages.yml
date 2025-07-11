@@ -11,3 +11,6 @@ content:
       - name: description
       - name: pubDate
         type: date
+        label: date
+        options:
+          format: yyyy-MM-dd
