@@ -8,11 +8,11 @@ const { post } = Astro.props;
 
 <article class="sm:flex sm:space-x-3 md:space-x-6 group relative">
 	<div
-		class="absolute z-0 -inset-x-4 -inset-y-4 sm:rounded-lg opacity-0 scale-85 group-hover:scale-100 group-hover:opacity-100 bg-slate-50 z-0 transition dark:bg-slate-800"
+		class="absolute z-0 -inset-x-4 -inset-y-4 sm:rounded-lg opacity-0 scale-85 group-hover:scale-100 group-hover:opacity-100 bg-zinc-50 z-0 transition dark:bg-zinc-800"
 	>
 	</div>
 	<div
-		class="relative w-full sm:w-48 sm:h-58 rounded-lg overflow-hidden bg-slate-50 dark:bg-slate-950 group-hover:bg-slate-200 dark:group-hover:bg-slate-950 flex-shtink-0 transition"
+		class="relative w-full sm:w-48 sm:h-58 rounded-lg overflow-hidden bg-zinc-50 dark:bg-zinc-950 group-hover:bg-zinc-200 dark:group-hover:bg-zinc-950 flex-shtink-0 transition"
 	>
 		{
 			post.data.heroImage && (
@@ -27,7 +27,7 @@ const { post } = Astro.props;
 
 	<div class="relative py-4 sm:px-6 rounded-lg flex-1">
 		<h2 class="text-lg sm:text-xl font-semibold my-1">
-			<a href={`/blog/${post.id}`}>
+			<a href={`/articles/${post.id}`}>
 				<div  class="absolute inset-0"></div>
 				<span>{post.data.title}</span>
 			</a>
@@ -35,7 +35,7 @@ const { post } = Astro.props;
 		<time class="text-sm font-mono">
 			<FormattedDate date={post.data.pubDate} />
 		</time>
-		<p class="mt-4 text-slate-700 dark:text-slate-300">
+		<p class="mt-4 text-zinc-700 dark:text-zinc-300">
 			{post.data.description}
 		</p>
 		<div

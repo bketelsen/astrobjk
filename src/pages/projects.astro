@@ -1,0 +1,70 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { Icon } from "astro-icon/components";
+
+const projects = await getCollection("projects");
+---
+
+<BaseLayout title="Projects" description="Lorenzo's collection of supernatural development projects">
+	<div class="mx-auto lg:max-w-4xl mt-16 mb-20">
+		<h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-balance mb-8">
+			Projects from the Crypt
+		</h1>
+		<p class="text-lg leading-8 text-zinc-700 dark:text-zinc-300 mb-16">
+			A collection of supernatural software projects crafted during the darkest hours of night. 
+			Each one born from centuries of undead development experience and a healthy dose of gothic flair.
+		</p>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+			{
+				projects.map((project) => (
+					<article class="group relative bg-white dark:bg-zinc-800 rounded-lg border border-zinc-200 dark:border-zinc-700 p-6 hover:border-primary-300 dark:hover:border-primary-600 transition-colors">
+						<div class="flex items-start space-x-4">
+							<div class="flex-shrink-0">
+								<Icon 
+									name={project.data.icon} 
+									class="w-8 h-8 text-primary-600 dark:text-primary-400" 
+								/>
+							</div>
+							<div class="flex-1 min-w-0">
+								<h2 class="text-xl font-semibold text-zinc-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+									<a 
+										href={project.data.url} 
+										target="_blank" 
+										rel="noopener noreferrer"
+										class="stretched-link"
+									>
+										{project.data.name}
+									</a>
+								</h2>
+								<p class="mt-2 text-zinc-600 dark:text-zinc-300 leading-relaxed">
+									{project.data.description}
+								</p>
+								<div class="mt-4 flex items-center text-sm text-zinc-500 dark:text-zinc-400 group-hover:text-primary-500 dark:group-hover:text-primary-400 transition-colors">
+									<span>{new URL(project.data.url).hostname}</span>
+									<Icon 
+										name="heroicons:arrow-top-right-on-square" 
+										class="ml-1 w-4 h-4" 
+									/>
+								</div>
+							</div>
+						</div>
+					</article>
+				))
+			}
+		</div>
+	</div>
+</BaseLayout>
+
+<style>
+	.stretched-link::after {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+		content: "";
+	}
+</style>

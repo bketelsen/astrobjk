@@ -51,11 +51,11 @@ const description =
 			{
 				page.lastPage > 1 && (
 					<div class="flex justify-center my-20">
-						<nav class="mx-auto inline-flex text-slate-700 dark:text-slate-400 rounded-lg -space-x-px">
+						<nav class="mx-auto inline-flex text-zinc-700 dark:text-zinc-400 rounded-lg -space-x-px">
 							{page.url.prev && (
 								<a
 									href={page.url.prev}
-									class="inline-flex items-center justify-center w-10 h-10 ring-1 ring-inset ring-slate-300 dark:ring-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700"
+									class="inline-flex items-center justify-center w-10 h-10 ring-1 ring-inset ring-zinc-300 dark:ring-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-700"
 								>
 									<Icon name="heroicons:chevron-left-16-solid" />
 								</a>
@@ -67,8 +67,8 @@ const description =
 									</span>
 								) : (
 									<a
-										href={`${num === 1 ? "/blog" : "/blog/" + num}`}
-										class="inline-flex items-center justify-center w-10 h-10 ring-1 ring-inset ring-slate-300 dark:ring-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700"
+										href={`${num === 1 ? "/articles" : "/articles/" + num}`}
+										class="inline-flex items-center justify-center w-10 h-10 ring-1 ring-inset ring-zinc-300 dark:ring-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-700"
 									>
 										{num}
 									</a>
@@ -77,7 +77,7 @@ const description =
 							{page.url.next && (
 								<a
 									href={page.url.next}
-									class="inline-flex items-center justify-center w-10 h-10 ring-1 ring-inset ring-slate-300 dark:ring-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700"
+									class="inline-flex items-center justify-center w-10 h-10 ring-1 ring-inset ring-zinc-300 dark:ring-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-700"
 								>
 									<Icon name="heroicons:chevron-right-16-solid" />
 								</a>

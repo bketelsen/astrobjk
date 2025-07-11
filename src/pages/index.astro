@@ -1,11 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
-import heroImageDark from "../images/about-me-dark.jpg";
-import heroImageLight from "../images/about-me-light.jpg";
+import heroImageLight from "../images/avatar.jpg";
 import FeaturedArticles from "../components/articles/FeaturedArticles.astro";
 import Projects from "../components/Projects.astro";
 import NewsletterForm from "../components/NewsletterForm.astro";
+import image1 from "../images/photos/bike.jpg";
+import image2 from "../images/photos/band.jpg";
+import image3 from "../images/photos/BW013.jpg";
+import image4 from "../images/photos/1102.jpg";
+import image5 from "../images/photos/20150716-070618871-3.jpg";
+
+let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
+
 ---
 
 <BaseLayout>
@@ -16,16 +23,20 @@ import NewsletterForm from "../components/NewsletterForm.astro";
 				<h1
 					class="text-3xl sm:text-5xl font-bold tracking-tight text-balance"
 				>
-					Code. Blood. Mild workplace horror.
+					Engineering Manager, Cloud Advocate, hacker, and open source enthusiast.
 				</h1>
 				<div class="mt-8 leading-8">
-					<p>
-						I’m Lorenzo di Lume Nero, a centuries-old vampire and
-						full stack developer navigating startup life in
-						Transylvania's tech scene. From nocturnal debugging tips
-						to supernatural sprint planning, sink your fangs into
-						articles that bite back.
-					</p>
+          <p class="mt-6 prose dark:prose-invert text-zinc-600 dark:text-zinc-400">
+            I’m Brian, and I teach people how to use the Cloud. I’ve been active in Open Source for as long
+            as I’ve been coding &mdash; and that’s a long time.
+          </p>
+          <p class="mt-6 prose dark:prose-invert text-zinc-600 dark:text-zinc-400">
+            With some friends, I wrote a <a href="https://www.manning.com/books/go-in-action">book about the Go programming language</a>.
+            I’ve given many talks about Go, Distributed Computing, and programming in general.
+          </p>
+          <p class="mt-6 prose dark:prose-invert text-zinc-600 dark:text-zinc-400">
+            Poke around and see what I’m up to. It’s all open source, so feel free to contribute.
+          </p>
 				</div>
 			</div>
 
@@ -34,17 +45,30 @@ import NewsletterForm from "../components/NewsletterForm.astro";
 				<Image
 					src={heroImageLight}
 					alt="Code. Blood. Mild workplace horror."
-					class="block dark:hidden  rounded-full  size-20 lg:size-[350px] object-cover ring-1 ring-slate-400/30 shadow"
+					class="block rounded-2xl lg:rotate-5 size-20 lg:size-[350px] object-cover ring-1 ring-zinc-400/30 shadow"
 				/>
-				<Image
-					src={heroImageDark}
-					alt="Code. Blood. Mild workplace horror."
-					class="hidden dark:block rounded-full size-20 lg:size-[350px] object-cover ring-1 ring-slate-400/30 shadow"
-				/>
+
 			</div>
 		</div>
 	</div>
-
+    <div class="mt-16 sm:mt-20">
+      <div class="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
+        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
+          <div
+            class={
+              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100  sm:rounded-2xl dark:bg-zinc-800 ' + rotations[imageIndex % rotations.length]
+            }
+          >
+            <Image
+              src={image}
+              alt=""
+              sizes="(min-width: 640px) 18rem, 11rem"
+              class="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
 	<!-- Featured articles -->
 	<div class="mx-auto lg:max-w-4xl my-16 sm:my-30">
 		<h2

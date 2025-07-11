@@ -1,30 +1,30 @@
 # So Basic - Astro Blog Template
 
-Howdy! Before you read anything below, you can check out the ✨ [Live Demo](https://sobasic.netlify.app/) ✨
+Howdy! Before you read anything below, you can check out the ✨ [Live Demo](https://astrobjk.netlify.app/) ✨
 
-[![Screenshot](screenshot.png)](https://sobasic.netlify.app/)
+[![Screenshot](screenshot.png)](https://astrobjk.netlify.app/)
 
 
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/lukeska/sobasic)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/lukeska/sobasic)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/lukeska/sobasic?devcontainer_path=.devcontainer/devcontainer.json)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/lukeska/astrobjk)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/lukeska/astrobjk)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/lukeska/astrobjk?devcontainer_path=.devcontainer/devcontainer.json)
 
 ## 📦 Installation
 
 ### Astro installation
 
 ```sh
-npm create astro@latest -- --template lukeska/sobasic
+npm create astro@latest -- --template lukeska/astrobjk
 ```
 
 ### Manual installation
 
 #### 1. Clone the repo
 ```sh
-git clone https://github.com/lukeska/sobasic.git my-project
+git clone https://github.com/lukeska/astrobjk.git my-project
 # or
-git clone https://github.com/lukeska/sobasic.git .
+git clone https://github.com/lukeska/astrobjk.git .
 ```
 The . will clone it to the current directory so make sure you are inside your project folder first.
 
