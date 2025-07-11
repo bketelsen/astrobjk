@@ -18,12 +18,12 @@ content:
         label: Description
       - name: pubDate
         type: date
-        label: date
+        label: Published Date
         options:
           format: yyyy-MM-dd
       - name: updatedDate
         type: date
-        label: date
+        label: Updated Date
         options:
           format: yyyy-MM-dd
       - name: heroImage
