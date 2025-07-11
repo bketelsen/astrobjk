@@ -6,7 +6,7 @@ import FormattedDate from "../components/FormattedDate.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 const ogImage = heroImage
 	? await getImage({
@@ -44,6 +44,13 @@ const ogImage = heroImage
 					>
 						<FormattedDate date={pubDate} />
 					</time>
+					{
+						updatedDate && (
+							<time class="order-first text-sm font-mono inline-flex mx-auto text-stone-400">
+								Updated:&nbsp;<FormattedDate date={updatedDate} />
+							</time>
+						)
+					}
 				</header>
 				<slot />
 			</div>
